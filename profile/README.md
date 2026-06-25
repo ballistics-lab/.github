@@ -40,7 +40,7 @@ flowchart TD
 ![lang](https://img.shields.io/badge/C++17-%2300599C?logo=c%2B%2B&logoColor=white)
 ![lang](https://img.shields.io/badge/C99-%23A8B9CC?logo=c&logoColor=white)
 ![license](https://img.shields.io/github/license/ballistics-lab/bclibc?color=%23008033)
-![release](https://img.shields.io/github/v/release/ballistics-lab/bclibc?labelColor=%23181717&logo=github&logoColor=white)
+[![release](https://img.shields.io/github/v/release/ballistics-lab/bclibc?labelColor=%23181717&logo=github&logoColor=white)](https://github.com/ballistics-lab/bclibc/releases/latest)
 
 Pure C++ ballistic solver: RK4 and Euler integration, Ridder’s method for zero-finding, and a stable,
 versioned C FFI surface (`BCLIBCFFI_*`) consumable from Dart, Python, Rust, or anything with a C ABI.
@@ -87,7 +87,7 @@ danger-space, and powder-temperature sensitivity. npm install js-ballistics.
 ![lang](https://img.shields.io/badge/Dart-%230175C2?logo=dart&logoColor=white)
 ![lang](https://img.shields.io/badge/Flutter-%2302569B?logo=flutter&logoColor=white)
 ![license](https://img.shields.io/github/license/ballistics-lab/ebalistyka?color=%23BD0000)
-![release](https://img.shields.io/github/v/release/o-murphy/ebalistyka?labelColor=%23181717&logo=github&logoColor=white)
+[![release](https://img.shields.io/github/v/release/o-murphy/ebalistyka?labelColor=%23181717&logo=github&logoColor=white)](https://github.com/o-murphy/bclibc/releases/latest)
 
 Cross-platform ballistic calculator app (Linux, Windows, Android — macOS/iOS in progress) built with Flutter, consuming bclibc through Dart FFI.
 Shooting profiles, trajectory tables, an SVG mil-reticle with live drop/windage indication, and profile import/export. Alpha software.
