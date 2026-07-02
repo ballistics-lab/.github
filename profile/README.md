@@ -26,8 +26,9 @@ flowchart TD
     
     A --> B["py-ballistic calc<br><i>(Cython)</i>"]
     A --> C["js-ballistics<br><i>(WASM/Emscripten)</i>"]
-    A --> D["ebalistyka<br><i>(Dart FFI)</i>"]
+    A --> D["dart_bclibc<br><i>(Dart FFI)</i>"]
     A -.->|"git submodule<br>C99 subset only"| E["micropython-bclibc<br><i>(natmod/usermod for MCUs)</i>"]
+    D --> F["ebalistyka<br><i>(Flutter app)</i>"]
 ```
 
 -----
@@ -81,6 +82,15 @@ TypeScript/JavaScript library powered by the C++ core compiled to WebAssembly vi
 or directly in the browser (CDN-ready, no build step). Supports wind layers, multi-BC drag models, Coriolis effect,
 danger-space, and powder-temperature sensitivity. npm install js-ballistics.
 
+#### [dart_bclibc](https://github.com/ballistics-lab/dart-bclibc)
+![lang](https://img.shields.io/badge/Dart-%230175C2?logo=dart&logoColor=white)
+![license](https://img.shields.io/github/license/ballistics-lab/dart-bclibc?color=%23008033)
+[![pub](https://img.shields.io/pub/v/dart_bclibc?labelColor=white&logo=dart&logoColor=%230175C2&cacheSeconds=0)](https://pub.dev/packages/dart_bclibc)
+
+Thin, zero-copy Dart FFI wrapper around `libbclibc_ffi`, bundling the `bclibc` C++ source as a git submodule (no pre-built binaries required).
+Covers the full solver surface — trajectory integration, zero-angle/apex/max-range solving, sight corrections, energy/OGW — plus a typed
+unit system (`Distance`, `Velocity`, `Temperature`, …). Supports Linux, Windows, macOS, Android, and iOS. `dart pub add dart_bclibc`. Beta software.
+
 ### Applications
 
 #### [ebalistyka](https://github.com/ballistics-lab/ebalistyka)
@@ -89,8 +99,9 @@ danger-space, and powder-temperature sensitivity. npm install js-ballistics.
 ![license](https://img.shields.io/github/license/ballistics-lab/ebalistyka?color=%23BD0000)
 [![release](https://img.shields.io/github/v/release/o-murphy/ebalistyka?labelColor=%23181717&logo=github&logoColor=white)](https://github.com/o-murphy/bclibc/releases/latest)
 
-Cross-platform ballistic calculator app (Linux, Windows, Android — macOS/iOS in progress) built with Flutter, consuming bclibc through Dart FFI.
-Shooting profiles, trajectory tables, an SVG mil-reticle with live drop/windage indication, and profile import/export. Alpha software.
+Cross-platform ballistic calculator app (Linux, Windows, Android — macOS/iOS in progress) built with Flutter, consuming `bclibc` through the
+[dart_bclibc](https://github.com/ballistics-lab/dart-bclibc) wrapper. Shooting profiles, trajectory tables, an SVG mil-reticle with live
+drop/windage indication, and profile import/export. Alpha software.
 
 -----
 
@@ -115,7 +126,7 @@ Shooting profiles, trajectory tables, an SVG mil-reticle with live drop/windage 
 
 <div align="center">
 
-[bclibc](https://github.com/ballistics-lab/bclibc) · [micropython-bclibc](https://github.com/ballistics-lab/micropython-bclibc) · [py-ballisticcalc](https://github.com/ballistics-lab/py-ballisticcalc) · [js-ballistics](https://github.com/ballistics-lab/js-ballistics) · [ebalistyka](https://github.com/ballistics-lab/ebalistyka)
+[bclibc](https://github.com/ballistics-lab/bclibc) · [micropython-bclibc](https://github.com/ballistics-lab/micropython-bclibc) · [py-ballisticcalc](https://github.com/ballistics-lab/py-ballisticcalc) · [js-ballistics](https://github.com/ballistics-lab/js-ballistics) · [dart_bclibc](https://github.com/ballistics-lab/dart-bclibc) · [ebalistyka](https://github.com/ballistics-lab/ebalistyka)
 
 </div>
 
