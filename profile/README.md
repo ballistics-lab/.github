@@ -26,7 +26,7 @@ flowchart TD
     
     A --> B["py-ballistic calc<br><i>(Cython)</i>"]
     A --> C["js-ballistics<br><i>(WASM/Emscripten)</i>"]
-    A --> D["dart_bclibc<br><i>(Dart FFI)</i>"]
+    A --> D["dart-bclibc<br><i>(Dart FFI)</i>"]
     A -.->|"git submodule<br>C99 subset only"| E["micropython-bclibc<br><i>(natmod/usermod for MCUs)</i>"]
     D --> F["ebalistyka<br><i>(Flutter app)</i>"]
 ```
@@ -82,7 +82,7 @@ TypeScript/JavaScript library powered by the C++ core compiled to WebAssembly vi
 or directly in the browser (CDN-ready, no build step). Supports wind layers, multi-BC drag models, Coriolis effect,
 danger-space, and powder-temperature sensitivity. npm install js-ballistics.
 
-#### [dart_bclibc](https://github.com/ballistics-lab/dart-bclibc)
+#### [dart-bclibc](https://github.com/ballistics-lab/dart-bclibc)
 ![lang](https://img.shields.io/badge/Dart-%230175C2?logo=dart&logoColor=white)
 ![license](https://img.shields.io/github/license/ballistics-lab/dart-bclibc?color=%23008033)
 [![pub](https://img.shields.io/pub/v/dart_bclibc?labelColor=white&logo=dart&logoColor=%230175C2&cacheSeconds=0)](https://pub.dev/packages/dart_bclibc)
