@@ -97,7 +97,7 @@ unit system (`Distance`, `Velocity`, `Temperature`, …). Supports Linux, Window
 ![lang](https://img.shields.io/badge/Dart-%230175C2?logo=dart&logoColor=white)
 ![lang](https://img.shields.io/badge/Flutter-%2302569B?logo=flutter&logoColor=white)
 ![license](https://img.shields.io/github/license/ballistics-lab/ebalistyka?color=%23BD0000)
-[![release](https://img.shields.io/github/v/release/o-murphy/ebalistyka?labelColor=%23181717&logo=github&logoColor=white)](https://github.com/o-murphy/bclibc/releases/latest)
+[![release](https://img.shields.io/github/v/release/o-murphy/ebalistyka?labelColor=%23181717&logo=github&logoColor=white)](https://github.com/o-murphy/ebalistyka/releases/latest)
 
 Cross-platform ballistic calculator app (Linux, Windows, Android — macOS/iOS in progress) built with Flutter, consuming `bclibc` through the
 [dart_bclibc](https://github.com/ballistics-lab/dart-bclibc) wrapper. Shooting profiles, trajectory tables, an SVG mil-reticle with live
