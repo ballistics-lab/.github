@@ -4,7 +4,7 @@
 
 <div align="center">
 
-# Ballistics Lab
+# [Ballistics Lab](https://github.com/ballistics-lab)
 
 **An open-source ecosystem for small-arms exterior ballistics**
 
