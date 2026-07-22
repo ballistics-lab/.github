@@ -20,7 +20,14 @@ SHIELDS_IO_BADGE = (
     "https://img.shields.io/badge/dynamic/json"
     "?label={label}&query={query}&url=" + quote_plus(JSON_URL)
 )
-PUB_PACKAGES = ["dart_bclibc", "a7p", "ob_dump_reader", "ob_dump_reader_flutter"]
+PUB_PACKAGES = [
+    "dart_bclibc",
+    "dart_bclibc_flutter",
+    "a7p",
+    "flutpak",
+    "ob_dump_reader",
+    "ob_dump_reader_flutter"
+]
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(
