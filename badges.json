@@ -2,7 +2,7 @@
   "pub": {
     "dart_bclibc": {
       "platform": {
-        "v": "android | ios | windows | linux | macos",
+        "v": "macos",
         "q": "https://img.shields.io/badge/dynamic/json?label=platform&query=%24.pub.dart_bclibc.platform.v&url=https%3A%2F%2Fraw.githubusercontent.com%2Fballistics-lab%2F.github%2Frefs%2Fheads%2Fmain%2Fbadges.json"
       },
       "sdk": {
@@ -12,27 +12,27 @@
     },
     "a7p": {
       "platform": {
-        "v": "android | ios | windows | linux | macos | web",
+        "v": "web",
         "q": "https://img.shields.io/badge/dynamic/json?label=platform&query=%24.pub.a7p.platform.v&url=https%3A%2F%2Fraw.githubusercontent.com%2Fballistics-lab%2F.github%2Frefs%2Fheads%2Fmain%2Fbadges.json"
       },
       "sdk": {
-        "v": "dart | flutter",
+        "v": "flutter",
         "q": "https://img.shields.io/badge/dynamic/json?label=sdk&query=%24.pub.a7p.sdk.v&url=https%3A%2F%2Fraw.githubusercontent.com%2Fballistics-lab%2F.github%2Frefs%2Fheads%2Fmain%2Fbadges.json"
       }
     },
     "ob_dump_reader": {
       "platform": {
-        "v": "android | ios | windows | linux | macos",
+        "v": "macos",
         "q": "https://img.shields.io/badge/dynamic/json?label=platform&query=%24.pub.ob_dump_reader.platform.v&url=https%3A%2F%2Fraw.githubusercontent.com%2Fballistics-lab%2F.github%2Frefs%2Fheads%2Fmain%2Fbadges.json"
       },
       "sdk": {
-        "v": "dart | flutter",
+        "v": "flutter",
         "q": "https://img.shields.io/badge/dynamic/json?label=sdk&query=%24.pub.ob_dump_reader.sdk.v&url=https%3A%2F%2Fraw.githubusercontent.com%2Fballistics-lab%2F.github%2Frefs%2Fheads%2Fmain%2Fbadges.json"
       }
     },
     "ob_dump_reader_flutter": {
       "platform": {
-        "v": "android | ios | windows | linux | macos",
+        "v": "macos",
         "q": "https://img.shields.io/badge/dynamic/json?label=platform&query=%24.pub.ob_dump_reader_flutter.platform.v&url=https%3A%2F%2Fraw.githubusercontent.com%2Fballistics-lab%2F.github%2Frefs%2Fheads%2Fmain%2Fbadges.json"
       },
       "sdk": {
