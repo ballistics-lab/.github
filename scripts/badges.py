@@ -41,11 +41,21 @@ def build_badge_url(label: str, query: str) -> str:
 
 def parse_pub_score_tags(tags: List[str]) -> Dict[str, str]:
     result = {"platform": "unknown", "sdk": "unknown"}
+
+    platform_values = []
+    sdk_values = []
+    
     for tag in tags:
         if tag.startswith("platform:"):
-            result["platform"] = tag.split(":", 1)[1]
+            platform_values.append(tag.split(":", 1)[1])
         elif tag.startswith("sdk:"):
-            result["sdk"] = tag.split(":", 1)[1]
+            sdk_values.append(tag.split(":", 1)[1])
+
+    if platform_values:
+        result["platform"] = " | ".join(platform_values)
+    if sdk_values:
+        result["sdk"] = " | ".join(sdk_values)
+    
     return result
 
 
