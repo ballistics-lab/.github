@@ -12,11 +12,11 @@
     },
     "dart_bclibc_flutter": {
       "platform": {
-        "v": "unknown",
+        "v": "android | ios | windows | linux | macos | web",
         "q": "https://img.shields.io/badge/dynamic/json?label=platform&query=%24.pub.dart_bclibc_flutter.platform.v&url=https%3A%2F%2Fraw.githubusercontent.com%2Fballistics-lab%2F.github%2Frefs%2Fheads%2Fmain%2Fbadges.json"
       },
       "sdk": {
-        "v": "unknown",
+        "v": "flutter",
         "q": "https://img.shields.io/badge/dynamic/json?label=sdk&query=%24.pub.dart_bclibc_flutter.sdk.v&url=https%3A%2F%2Fraw.githubusercontent.com%2Fballistics-lab%2F.github%2Frefs%2Fheads%2Fmain%2Fbadges.json"
       }
     },
