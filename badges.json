@@ -10,16 +10,6 @@
         "q": "https://img.shields.io/badge/dynamic/json?label=sdk&query=%24.pub.dart_bclibc.sdk.v&url=https%3A%2F%2Fraw.githubusercontent.com%2Fballistics-lab%2F.github%2Frefs%2Fheads%2Fmain%2Fbadges.json"
       }
     },
-    "dart_bclibc_flutter": {
-      "platform": {
-        "v": "android | ios | windows | linux | macos | web",
-        "q": "https://img.shields.io/badge/dynamic/json?label=platform&query=%24.pub.dart_bclibc_flutter.platform.v&url=https%3A%2F%2Fraw.githubusercontent.com%2Fballistics-lab%2F.github%2Frefs%2Fheads%2Fmain%2Fbadges.json"
-      },
-      "sdk": {
-        "v": "flutter",
-        "q": "https://img.shields.io/badge/dynamic/json?label=sdk&query=%24.pub.dart_bclibc_flutter.sdk.v&url=https%3A%2F%2Fraw.githubusercontent.com%2Fballistics-lab%2F.github%2Frefs%2Fheads%2Fmain%2Fbadges.json"
-      }
-    },
     "a7p": {
       "platform": {
         "v": "android | ios | windows | linux | macos | web",
