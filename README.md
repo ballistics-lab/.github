@@ -85,7 +85,7 @@ danger-space, and powder-temperature sensitivity. npm install js-ballistics.
 #### [dart-bclibc](https://github.com/ballistics-lab/dart-bclibc)
 ![lang](https://img.shields.io/badge/Dart-%230175C2?logo=dart&logoColor=white)
 ![license](https://img.shields.io/github/license/ballistics-lab/dart-bclibc?color=%23008033)
-[![pub](https://img.shields.io/pub/v/dart_bclibc?labelColor=white&logo=dart&logoColor=%230175C2&cacheSeconds=0)](https://pub.dev/packages/dart_bclibc)
+[![pub](https://img.shields.io/pub/v/bclibc?labelColor=white&logo=dart&logoColor=%230175C2&cacheSeconds=0)](https://pub.dev/packages/dart_bclibc)
 
 Thin, zero-copy Dart FFI wrapper around `libbclibc_ffi`, bundling the `bclibc` C++ source as a git submodule (no pre-built binaries required).
 Covers the full solver surface — trajectory integration, zero-angle/apex/max-range solving, sight corrections, energy/OGW — plus a typed
