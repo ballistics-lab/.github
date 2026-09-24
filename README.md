@@ -70,7 +70,15 @@ Includes a streaming/callback trajectory API for boards with as little as ~200 K
 [![pypi](https://img.shields.io/pypi/v/py-ballisticcalc?labelColor=white&logo=pypi&logoColor=%233775A9)](https://pypi.org/project/py-ballisticcalc/)
 
 Python library for ballistic trajectory calculation, with pluggable engines (pure-Python RK4/Euler/Verlet, Cython-accelerated, or SciPy-backed)
-and full unit-conversion support across angular, distance, energy, pressure, temperature, velocity and weight dimensions. `pip install py-ballisticcalc`.  
+and full unit-conversion support across angular, distance, energy, pressure, temperature, velocity and weight dimensions. `pip install py-ballisticcalc`.
+
+### [tiny-bclibc-wasm-py](https://github.com/ballistics-lab/tiny-bclibc-wasm-py)
+![lang](https://img.shields.io/badge/Python-%233776AB?logo=python&logoColor=white)
+![webassembly](https://img.shields.io/badge/webassembly-%23654FF0?logo=webassembly&logoColor=white)
+![license](https://img.shields.io/github/license/ballistics-lab/tiny-bclibc-wasm-py?color=%23008033)
+[![pypi](https://img.shields.io/pypi/v/tiny-bclibc-wasm?labelColor=white&logo=pypi&logoColor=%233775A9)](https://pypi.org/project/tiny-bclibc-wasm/)
+
+Ballistic solver (tiny_bclibc) as WebAssembly for CPython, PyPy and Pythonista, with a py-ballisticcalc engine
 
 #### [js-ballistics](https://github.com/ballistics-lab/js-ballistics)
 ![lang](https://img.shields.io/badge/typescript-%233178C6?logo=TypeScript&logoColor=white)
