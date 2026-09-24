@@ -22,14 +22,18 @@ Ballistic trajectory math doesn’t change between platforms — only the deploy
 
 ```mermaid
 flowchart TD
-    A["bclibc<br><i>C++17 core</i><br>RK4/Euler, Ridder's method<br>C FFI: BCLIBCFFI_*<br>+ bundled C99 subset (tiny_bclibc)"]
-    
-    A --> B["py-ballistic calc<br><i>(Cython)</i>"]
+    A["bclibc<br><i>C++17 core</i><br>RK4/Euler/Verlet + adaptive RK45<br>(Cash-Karp, Dormand-Prince, Tsitouras)<br>C FFI: BCLIBCFFI_*<br>+ C99 subset (tiny_bclibc, Tsitouras)"]
+
+    A --> B["py-ballisticcalc<br><i>(Cython)</i>"]
     A --> C["js-ballistics<br><i>(WASM/Emscripten)</i>"]
     A --> D["dart-bclibc<br><i>(Dart FFI)</i>"]
     A -.->|"git submodule<br>C99 subset only"| E["micropython-bclibc<br><i>(natmod/usermod for MCUs)</i>"]
+    A -.->|"git submodule<br>C99 subset → WASM"| T["tiny-bclibc-wasm-py<br><i>(WebAssembly: CPython, PyPy, Pythonista)</i>"]
+    T -.->|"engine plugin<br>(entry points)"| B
+    E -.-|"same Python API"| T
     D --> F["ebalistyka<br><i>(Flutter app)</i>"]
 ```
+
 
 -----
 
