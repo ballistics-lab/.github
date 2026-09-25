@@ -106,7 +106,6 @@ unit system (`Distance`, `Velocity`, `Temperature`, …). Supports Linux, Window
 ### Applications
 
 #### [ebalistyka](https://github.com/ballistics-lab/ebalistyka)
-![lang](https://img.shields.io/badge/Dart-%230175C2?logo=dart&logoColor=white)
 ![lang](https://img.shields.io/badge/Flutter-%2302569B?logo=flutter&logoColor=white)
 ![license](https://img.shields.io/github/license/ballistics-lab/ebalistyka?color=%23BD0000)
 [![release](https://img.shields.io/github/v/release/o-murphy/ebalistyka?labelColor=white&logo=github&logoColor=%23181717)](https://github.com/o-murphy/ebalistyka/releases/latest)
