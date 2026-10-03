@@ -47,9 +47,9 @@ flowchart TD
 ![license](https://img.shields.io/github/license/ballistics-lab/bclibc?color=%23008033)
 [![release](https://img.shields.io/github/v/release/ballistics-lab/bclibc?labelColor=white&logo=github&logoColor=%23181717)](https://github.com/ballistics-lab/bclibc/releases/latest)
 
-Pure C++ ballistic solver: RK4 and Euler integration, Ridder’s method for zero-finding, and a stable,
-versioned C FFI surface (`BCLIBCFFI_*`) consumable from Dart, Python, Rust, or anything with a C ABI.
-Builds to a static core (`libbclibc_core`) and a shared FFI lib (`libbclibc_ffi`) for Linux, macOS, and Windows.
+Pure C++ ballistic solver: RK4, Euler, Cash-Karp, Dormand-Prince and Tsitouras integration, Ridder’s method for zero-finding, and a stable,
+versioned C FFI surface (`BCLIBCFFI_*`) consumable from Dart, Python, Rust, WASM or anything with a C ABI.
+Builds to a static core (`libbclibc_core`) and a shared FFI lib (`libbclibc_ffi`) for Linux, macOS, and Windows, and also as bare wasm32-wasi module.
 The repo also bundles a **C99 subset (`tiny_bclibc`)** of the same engine, used as-is by `micropython-bclibc` via git submodule.
 
 ### Embedded / MicroPython
