@@ -22,7 +22,7 @@ Ballistic trajectory math doesn’t change between platforms — only the deploy
 
 ```mermaid
 flowchart TD
-    A["bclibc<br><i>C++17 core</i><br>RK4/Euler/Verlet + adaptive RK45<br>(Cash-Karp, Dormand-Prince, Tsitouras)<br>C FFI: BCLIBCFFI_*<br>+ C99 subset (tiny_bclibc, Tsitouras)"]
+    A["bclibc<br><i>C++17&nbsp;core</i><br>RK4/Euler/Verlet&nbsp;+&nbsp;adaptive&nbsp;RK45<br>(Cash-Karp,&nbsp;Dormand-Prince,&nbsp;Tsitouras)<br>C&nbsp;FFI:&nbsp;BCLIBCFFI_*<br>+&nbsp;C99&nbsp;subset&nbsp;(tiny_bclibc,&nbsp;Tsitouras)"]
 
     A --> B["py-ballisticcalc<br><i>(Cython)</i>"]
     A --> C["js-ballistics<br><i>(WASM/Emscripten)</i>"]
