@@ -34,6 +34,22 @@ flowchart TD
     D --> F["ebalistyka<br><i>(Flutter app)</i>"]
 ```
 
+## Testing
+
+Every wrapper that can drive a `py-ballisticcalc` engine is checked against the same, well-covered
+test suite from `py-ballisticcalc`. This keeps the bindings numerically consistent with each other
+and with the C++ core, instead of each wrapper maintaining its own copy of the tests.
+
+```mermaid
+flowchart TD
+    P["py-ballisticcalc<br><i>shared test suite</i><br>pure Python + SciPy engines"]
+    P -.->|"tests"| X["py-ballisticcalc.exts<br><i>Cython</i>"]
+    P -.->|"tests"| D["dart-bclibc<br><i>via Python bridge process</i>"]
+    P -.->|"tests"| T["tiny-bclibc-wasm-py<br><i>engine plugin</i>"]
+    P -.->|"ported copy"| J["js-ballistics<br><i>own copy of the suite</i>"]
+```
+
+js-ballistics cannot load a Python engine, so it keeps its own port of the same suite.
 
 -----
 
