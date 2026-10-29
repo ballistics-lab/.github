@@ -20,6 +20,11 @@ One physics core — point-mass (3‑DoF) trajectory model plus spin drift — i
 
 Ballistic trajectory math doesn’t change between platforms — only the deployment target does. Instead of re-deriving the physics for every language, this organization keeps a **single C++/C99 core** (`bclibc` / `tiny_bclibc`) and builds thin, idiomatic bindings around it for desktop, mobile, web, and embedded targets. One engine, one set of bugs to fix, many places it runs.
 
+Every wrapper that can drive a `py-ballisticcalc` engine is checked against the same, well-covered
+test suite from `py-ballisticcalc`. This keeps the bindings numerically consistent with each other
+and with the C++ core, so the bindings stay numerically consistent with each other and with the C++ core.
+js-ballistics cannot load a Python engine, so it keeps its own port of the same suite.
+
 ```mermaid
 flowchart TD
     A["bclibc<br><i>C++17&nbsp;core</i><br>RK4/Euler/Verlet&nbsp;+&nbsp;adaptive&nbsp;RK45<br>(Cash-Karp,&nbsp;Dormand-Prince,&nbsp;Tsitouras)<br>C&nbsp;FFI:&nbsp;BCLIBCFFI_*"]
@@ -37,27 +42,11 @@ flowchart TD
     D -->|"Python bridge"| API
     T -->|"engine plugin<br>(entry points)"| API
     API --> P["py-ballisticcalc<br><i>+ pure Python and SciPy engines</i>"]
+    API -.-> O["shared test suite"]
 
     E -.-|"same Python API"| T
     D --> F["ebalistyka<br><i>(Flutter app)</i>"]
 ```
-
-## Testing
-
-Every wrapper that can drive a `py-ballisticcalc` engine is checked against the same, well-covered
-test suite from `py-ballisticcalc`. This keeps the bindings numerically consistent with each other
-and with the C++ core, so the bindings stay numerically consistent with each other and with the C++ core.
-
-```mermaid
-flowchart TD
-    P["py-ballisticcalc<br><i>shared test suite</i><br>pure Python + SciPy engines"]
-    P -.->|"tests"| X["py-ballisticcalc.exts<br><i>Cython</i>"]
-    P -.->|"tests"| D["dart-bclibc<br><i>via Python bridge process</i>"]
-    P -.->|"tests"| T["tiny-bclibc-wasm-py<br><i>engine plugin</i>"]
-    P -.->|"ported copy"| J["js-ballistics<br><i>own copy of the suite</i>"]
-```
-
-js-ballistics cannot load a Python engine, so it keeps its own port of the same suite.
 
 -----
 
