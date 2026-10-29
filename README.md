@@ -25,7 +25,7 @@ flowchart TD
     A["bclibc<br><i>C++17&nbsp;core</i><br>RK4/Euler/Verlet&nbsp;+&nbsp;adaptive&nbsp;RK45<br>(Cash-Karp,&nbsp;Dormand-Prince,&nbsp;Tsitouras)<br>C&nbsp;FFI:&nbsp;BCLIBCFFI_*<br>+&nbsp;C99&nbsp;subset&nbsp;(tiny_bclibc,&nbsp;Tsitouras)"]
 
     A --> B["py-ballisticcalc<br><i>(Cython)</i>"]
-    A --> C["js-ballistics<br><i>(bare WASM, zig/wasi-sdk))</i>"]
+    A --> C["js-ballistics<br><i>(bare WASM, zig/wasi-sdk)</i>"]
     A --> D["dart-bclibc<br><i>(Dart FFI)</i>"]
     A -.->|"git submodule<br>C99 subset only"| E["micropython-bclibc<br><i>(natmod/usermod for MCUs)</i>"]
     A -.->|"git submodule<br>C99 subset → WASM"| T["tiny-bclibc-wasm-py<br><i>(WebAssembly: CPython, PyPy, Pythonista)</i>"]
@@ -38,7 +38,7 @@ flowchart TD
 
 Every wrapper that can drive a `py-ballisticcalc` engine is checked against the same, well-covered
 test suite from `py-ballisticcalc`. This keeps the bindings numerically consistent with each other
-and with the C++ core, instead of each wrapper maintaining its own copy of the tests.
+and with the C++ core, so the bindings stay numerically consistent with each other and with the C++ core.
 
 ```mermaid
 flowchart TD
