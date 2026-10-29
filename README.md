@@ -22,16 +22,24 @@ Ballistic trajectory math doesn’t change between platforms — only the deploy
 
 ```mermaid
 flowchart TD
-    A["bclibc<br><i>C++17&nbsp;core</i><br>RK4/Euler/Verlet&nbsp;+&nbsp;adaptive&nbsp;RK45<br>(Cash-Karp,&nbsp;Dormand-Prince,&nbsp;Tsitouras)<br>C&nbsp;FFI:&nbsp;BCLIBCFFI_*<br>+&nbsp;C99&nbsp;subset&nbsp;(tiny_bclibc,&nbsp;Tsitouras)"]
+    A["bclibc<br><i>C++17 core</i><br>RK4/Euler/Verlet + adaptive RK45<br>C FFI: BCLIBCFFI_*"]
+    A2["tiny_bclibc<br><i>C99 subset for embedding</i>"]
+    A -->|"subset"| A2
 
-    A --> B["py-ballisticcalc<br><i>(Cython)</i>"]
-    A --> C["js-ballistics<br><i>(bare WASM, zig/wasi-sdk)</i>"]
-    A --> D["dart-bclibc<br><i>(Dart FFI)</i>"]
-    A -.->|"git submodule<br>C99 subset only"| E["micropython-bclibc<br><i>(natmod/usermod for MCUs)</i>"]
-    A -.->|"git submodule<br>C99 subset → WASM"| T["tiny-bclibc-wasm-py<br><i>(WebAssembly: CPython, PyPy, Pythonista)</i>"]
-    T -.->|"engine plugin<br>(entry points)"| B
+    A --> X["py-ballisticcalc.exts<br><i>Cython</i>"]
+    A --> D["dart-bclibc<br><i>Dart FFI</i>"]
+    A --> J["js-ballistics<br><i>bare WASM, zig/wasi-sdk</i>"]
+    A2 --> T["tiny-bclibc-wasm-py<br><i>WASM: CPython, PyPy, Pythonista</i>"]
+    A2 --> E["micropython-bclibc<br><i>natmod / usermod for MCUs</i>"]
+
+    API{{"py-ballisticcalc<br>compatible engine API"}}
+    X --> API
+    D -->|"Python bridge"| API
+    T -->|"engine plugin"| API
+    API --> P["py-ballisticcalc<br><i>+ pure Python and SciPy engines</i>"]
+
     E -.-|"same Python API"| T
-    D --> F["ebalistyka<br><i>(Flutter app)</i>"]
+    D --> F["ebalistyka<br><i>Flutter app</i>"]
 ```
 
 ## Testing
