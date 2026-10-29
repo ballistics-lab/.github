@@ -29,7 +29,7 @@ flowchart TD
     A --> X["py-ballisticcalc.exts<br><i>(Cython)</i>"]
     A --> D["dart-bclibc<br><i>(Dart FFI)</i>"]
     A --> J["js-ballistics<br><i>(bare WASM, zig/wasi-sdk)</i>"]
-    A2 -.->|"git submodule<br>C99 subset → WASM"| T["tiny-bclibc-wasm-py<br><i>(WebAssembly: CPython, PyPy, Pythonista)</i>"]
+    A2 -.->|"git submodule<br>C99 subset only"| T["tiny-bclibc-wasm-py<br><i>(WebAssembly: CPython, PyPy, Pythonista)</i>"]
     A2 -.->|"git submodule<br>C99 subset only"| E["micropython-bclibc<br><i>(natmod/usermod for MCUs)</i>"]
 
     API{{"py-ballisticcalc<br>compatible engine API"}}
