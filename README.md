@@ -25,7 +25,7 @@ flowchart TD
     A["bclibc<br><i>C++17&nbsp;core</i><br>RK4/Euler/Verlet&nbsp;+&nbsp;adaptive&nbsp;RK45<br>(Cash-Karp,&nbsp;Dormand-Prince,&nbsp;Tsitouras)<br>C&nbsp;FFI:&nbsp;BCLIBCFFI_*<br>+&nbsp;C99&nbsp;subset&nbsp;(tiny_bclibc,&nbsp;Tsitouras)"]
 
     A --> B["py-ballisticcalc<br><i>(Cython)</i>"]
-    A --> C["js-ballistics<br><i>(WASM/Emscripten)</i>"]
+    A --> C["js-ballistics<br><i>(bare WASM, zig/wasi-sdk))</i>"]
     A --> D["dart-bclibc<br><i>(Dart FFI)</i>"]
     A -.->|"git submodule<br>C99 subset only"| E["micropython-bclibc<br><i>(natmod/usermod for MCUs)</i>"]
     A -.->|"git submodule<br>C99 subset → WASM"| T["tiny-bclibc-wasm-py<br><i>(WebAssembly: CPython, PyPy, Pythonista)</i>"]
@@ -106,7 +106,7 @@ Ballistic solver (tiny_bclibc) as WebAssembly for CPython, PyPy and Pythonista, 
 ![license](https://img.shields.io/github/license/ballistics-lab/js-ballistics)
 [![npm](https://img.shields.io/npm/v/js-ballistics?labelColor=white&logo=npm&logoColor=%23CB3837)](https://www.npmjs.com/package/js-ballistics)
 
-TypeScript/JavaScript library powered by the C++ core compiled to WebAssembly via Emscripten — runs in Node.js
+TypeScript/JavaScript library powered by the C++ core compiled to bare-WebAssembly — runs in Node.js
 or directly in the browser (CDN-ready, no build step). Supports wind layers, multi-BC drag models, Coriolis effect,
 danger-space, and powder-temperature sensitivity. npm install js-ballistics.
 
@@ -115,9 +115,9 @@ danger-space, and powder-temperature sensitivity. npm install js-ballistics.
 ![license](https://img.shields.io/github/license/ballistics-lab/dart-bclibc?color=%23008033)
 [![pub](https://img.shields.io/pub/v/bclibc?labelColor=white&logo=dart&logoColor=%230175C2&cacheSeconds=0)](https://pub.dev/packages/bclibc)
 
-Thin, zero-copy Dart FFI wrapper around `libbclibc_ffi`, bundling the `bclibc` C++ source as a git submodule (no pre-built binaries required).
+Thin, zero-copy Dart FFI/WASM wrapper around `libbclibc_ffi`, bundling the `bclibc` C++ source as a git submodule (no pre-built binaries required).
 Covers the full solver surface — trajectory integration, zero-angle/apex/max-range solving, sight corrections, energy/OGW — plus a typed
-unit system (`Distance`, `Velocity`, `Temperature`, …). Supports Linux, Windows, macOS, Android, and iOS. `dart pub add dart_bclibc`. Beta software.
+unit system (`Distance`, `Velocity`, `Temperature`, …). Supports Linux, Windows, macOS, Android, iOS and Web.
 
 ### Applications
 
